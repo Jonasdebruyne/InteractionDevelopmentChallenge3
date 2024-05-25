@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classification</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="phone">
+      <div class="top">
+        <i class="fa fa-flash border"></i>
+        <i class="fa fa-angle-up black"></i>
+        <img src="images/live.svg" alt="live" />
+      </div>
+      <video
+        id="webcam"
+        autoplay
+        playsinline
+        width="342"
+        height="250"
+        style="transform: scale(-1, 1)"
+      ></video>
+      <canvas id="canvas" class="d-none"></canvas>
+      <audio id="snapSound" src="" preload="auto"></audio>
+      <div class="output">
+        <div class="output__image"></div>
+        <div class="output__data"></div>
+      </div>
+      <h1>Take a picture</h1>
+      <div class="elements">
+        <div class="slider">
+          <p>Slowmotion</p>
+          <p>Video</p>
+          <p class="active">Foto</p>
+          <p>Portret</p>
+          <p>Panorama</p>
+        </div>
+        <div class="bottom">
+          <div class="image"></div>
+          <div class="column">
+            <div class="btn">
+              <p class="border"></p>
+            </div>
+            <p class="tryAgain">Try again</p>
+          </div>
+          <img src="images/sync.svg" class="black" alt="sync" id="cameraFlip" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <style type="text/css" data-glamor=""></style>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
